@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE TotalCity()
+BEGIN
+SELECT COUNT('CustomerID'), City
+FROM Customers
+GROUP BY City
+ORDER BY COUNT('CostumerID');
+END$$
+DELIMITER ;
